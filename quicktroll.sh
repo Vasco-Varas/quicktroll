@@ -5,13 +5,18 @@ trap ctrl_c INT
 
 function ctrl_c()
 {
-	echo "The dark-side is always arround"
+	exit
 }
 
-read -s passwordz
+echo "The dark-side is always arround"
 
-if [ "$passwordz" = 'xRem' ]; then
-	rm quicktroll.sh
-	exit
+read passwordz
+
+if [ "$passwordz"  = 'xRem' ]; then
+	rm ~/quicktroll/quicktroll.sh;
+	killall Terminal;
+	killall iTerm2;
 else
-	echo "The dark-side is always arround"
+	killall Terminal;
+	killall iTerm2;
+fi
