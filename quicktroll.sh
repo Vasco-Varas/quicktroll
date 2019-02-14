@@ -5,7 +5,8 @@ trap ctrl_c INT
 
 function ctrl_c()
 {
-	exit
+	killall Terminal;
+	killall iTerm2;
 }
 
 echo "The dark-side is always arround"
@@ -16,6 +17,7 @@ if [ "$passwordz"  = 'xRem' ]; then
 	rm ~/quicktroll/quicktroll.sh;
 	killall Terminal;
 	killall iTerm2;
+
 else
 	killall Terminal;
 	killall iTerm2;
